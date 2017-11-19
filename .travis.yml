@@ -1,0 +1,9 @@
+
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t rakshans1/android-nodejs .
+  - docker run rakshans1/android-nodejs /bin/sh -c "android list && node -v && npm -v"
